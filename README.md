@@ -16,7 +16,7 @@ For more details in synthetic datasets generation, see [synthetic_gen.py](https:
 
 ## Code
 
-Folder [src](https://github.com/lezaf/BiasExplain/tree/main/src) contains the code for our algorithms.
+Folder [src](https://github.com/lezaf/BiasExplain/tree/main/src) contains the code for our algorithms. To setup the necessary dependencies, there are [environment.yml](https://github.com/lezaf/BiasExplain/blob/main/src/environment.yml) and [requirements.txt](https://github.com/lezaf/BiasExplain/blob/main/src/requirements.txt) files.
 
 ## References:
 
