@@ -23,7 +23,7 @@ def generate_synthetic_graph(num_users,
                              path=None,
                              filename=None):
     '''Generates a synthetic bipartite graph of users-items. Popularities in items
-    can be determined using Zipf's law.
+    are determined using Zipf's law.
        
     Notes:
         The popularities are are generated with following equation:
