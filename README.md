@@ -2,7 +2,7 @@
 Code and data for the paper: "Counterfactual explanations for Bias Recommendation".
 
 ## Datasets
-Folder datasets contains the real and synthetic data we used.
+Folder [datasets](https://github.com/lezaf/BiasExplain/tree/main/datasets) contains the real and synthetic data we used.
 
 Within this folder:
 
@@ -16,7 +16,9 @@ Zipped folder synthetic contains the data we generated with different parameters
 
 For more details in synthetic datasets generation, see [synthetic_gen.py](https://github.com/lezaf/BiasExplain/blob/main/src/utils/synthetic_gen.py).
 
-Folder src contains the code for our algorithms.
+## Code
+
+Folder [src](https://github.com/lezaf/BiasExplain/tree/main/src) contains the code for our algorithms.
 
 ## References:
 
