@@ -2,9 +2,7 @@
 Code and data for the paper: "Counterfactual explanations for Bias Recommendation".
 
 ## Datasets
-Folder [datasets](https://github.com/lezaf/BiasExplain/tree/main/datasets) contains the real and synthetic data we used.
-
-Within this folder:
+Folder [datasets](https://github.com/lezaf/BiasExplain/tree/main/datasets) contains the real and synthetic data we used. Within this folder:
 
 ### Real
 Zipped folder ml-100k contains the public MovieLens dataset with 100K ratings.
