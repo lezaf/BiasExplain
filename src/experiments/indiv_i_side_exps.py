@@ -7,8 +7,6 @@ import time
 import datetime
 import os
 
-from   experiments.group_level_experiments_unseen import calculate_nx_ppr_from_R
-
 from   utils.recwalk_funcs              import create_recwalk_model, create_recwalk_model_from_adj
 from   utils.counterfactual             import ppr_absorbing_2_item_side
 from   model.user_item_dataset          import UserItemDataset
