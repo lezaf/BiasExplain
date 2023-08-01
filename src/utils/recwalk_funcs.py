@@ -18,7 +18,7 @@ def create_recwalk_model_from_adj(adj_mat,
         P (numpy.ndarray): The transition probability matrix
     '''
     # ------------ #
-    # TODO: Matrix M calculation
+    # TODO (extension): use inter-item transitions matrix
     M = 0
     # ------------ #
 
@@ -57,7 +57,7 @@ def create_recwalk_model(R,
     '''
     
     # ------------ #
-    # TODO: Matrix M calculation
+    # TODO (extension): use inter-item transitions matrix
     M = 0
     # ------------ #
     
