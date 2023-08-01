@@ -11,9 +11,9 @@ def calculate_lambda(scores_absorbing_items,
     '''
     Args:
         scores_absorbing_items (numpy.2darray): Items absorbing scores         (p_j) 
-        user_x_id (int): Mapped id of current user                         (u)
-        nb_ids (numpy.1darray): Mapped ids of user_x_id user  (R_u)
-        nbs_to_remove (numpy.1darray): Mapped ids of neighbors to remove (S_u)
+        user_x_id (int): Mapped id of current user                             (u)
+        nb_ids (numpy.1darray): Mapped ids of user_x_id user                   (R_u)
+        nbs_to_remove (numpy.1darray): Mapped ids of neighbors to remove       (S_u)
         genre_absorbing_col (int): Column of I_0 in absorbing scores           (I_0)
         gamma (float): Gamma parameter
     '''
