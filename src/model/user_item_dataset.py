@@ -33,7 +33,7 @@ class UserItemDataset:
                   items_filepath,
                   genres_filepath,
                   ratings_filepath):
-        '''Reads user-movie ratins in MovieLens format.
+        '''Reads user-movie ratings in MovieLens format.
 
         Source: https://grouplens.org/datasets/movielens/
 
