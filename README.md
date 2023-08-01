@@ -1,12 +1,20 @@
 # Counterfactual Explanations for Bias Recommendation
-
 Code and data for the paper: "Counterfactual explanations for Bias Recommendation".
 
+## Datasets
 Folder datasets contains the real and synthetic data we used.
 
-Within this folder, folder ml-100k contains the public MovieLens dataset with 100K ratings.
+Within this folder:
 
-Folder synthetic contains the data we generated with different parameters (in the file name).
+### Real
+Zipped folder ml-100k contains the public MovieLens dataset with 100K ratings.
+
+### Synthetic
+Zipped folder synthetic contains the data we generated with different parameters (in the file name). Files *.info* contain metadata for the synthetic dataset. Files *.edges* contain the generated user-item graph in the format: `<user_id_x> <item_id_y>\n` (per line), meaning `<user_id_x>` rated `<item_id_y>`.
+
+*Synthetic dataset filename explanation:* in e.g. `synth_0.7_b_1.3_p.edges`, 0.7 is the *bias* and 1.3 is the *popularity*.
+
+For more details in synthetic datasets generation, see [synthetic_gen.py](https://github.com/lezaf/BiasExplain/blob/main/src/utils/synthetic_gen.py).
 
 Folder src contains the code for our algorithms.
 
