@@ -7,16 +7,15 @@ class UserItemDataset:
 
     Attributes:
         users_data (numpy.ndarray): (n, 1) array where rows are n user ids and columns are
-                                    the gender of the user.
-                                    The value at the columns are 0 for male and 1 for female
+                                    the gender of the users (0: male, 1: female).
         items_data (numpy.ndarray): (m, g) array where rows are m item ids and columns are
                                     the g possible genres.
-                                    If an item i has the genre j, then items_data[i][j] is 1, 0 otherwise
+                                    If an item i has the genre j, then items_data[i][j] == 1, 0 otherwise
         interactions_data (numpy.ndarray): (n, m) array where rows are n user ids and columns are
                                            m item ids.
-                                           If a user i has interacted with item j then interactions_data[i, j]
-                                           is equal to 1, 0 otherwise.
-        genres_mapping (dictionary): The mapping between genre textual representation and their ids
+                                           If a user i rated item j then interactions_data[i, j] == 1,
+                                           0 otherwise.
+        genres_mapping (dictionary): The mapping between genre textual representation and their ids.
                                     
 
     '''
@@ -27,56 +26,6 @@ class UserItemDataset:
         self.interactions_data = None
         self.genres_mapping = dict()
 
-    # For testing purposes only.
-    # TODO: to be removed
-    def set_attributes(self,
-                       users_data,
-                       items_data,
-                       interactions_data,
-                       genres_mapping):
-        self.users_data = users_data
-        self.items_data = items_data
-        self.interactions_data = interactions_data
-        self.genres_mapping = genres_mapping
-
-
-    # def load_synthetic_data(self,
-    #                         R,
-    #                         user_ids_U_0,
-    #                         item_ids_I_0,
-    #                         genres_str):
-    #     '''Loads synthetic data generated with utils/synthetic_data_generation.py
-
-    #     Notes:
-    #         * Works only with U_0, U_1 user groups and I_0, I_1 item groups
-    #     '''
-    #     users_num, items_num = R.shape[0], R.shape[1]
-
-    #     # Load users data
-    #     self.users_data = np.zeros((users_num, 1), dtype=int)
-    #     for i in range(users_num):
-    #         # Users in user_ids_U_0 are considered male, so 0
-    #         # Users NOT in user_ids_U_0 are considered female, so 1
-    #         if i not in user_ids_U_0:
-    #             self.users_data[i][0] = 1
-
-    #     # Create genres mapping
-    #     for i in range(len(genres_str)):
-    #         self.genres_mapping[genres_str[i]] = i
-
-    #     genres_num = len(genres_str)
-
-    #     # Load items data
-    #     self.items_data = np.zeros((items_num, genres_num), dtype=int)
-    #     for i in range(items_num):
-    #         if i in item_ids_I_0:
-    #             self.items_data[i][0] = 1
-    #         else:
-    #             self.items_data[i][1] = 1
-
-    #     # Load interactions data
-    #     self.interactions_data = R.copy()
-
 
     def load_data(self,
                   info_filepath,
@@ -84,11 +33,13 @@ class UserItemDataset:
                   items_filepath,
                   genres_filepath,
                   ratings_filepath):
+        '''Reads user-movie ratins in MovieLens format.
 
-        users_num = 0
-        items_num = 0
+        Source: https://grouplens.org/datasets/movielens/
 
-        # Read info about users and items number
+        '''
+
+        # Read users and items number
         with open(info_filepath) as f:
             users_num = int(f.readline().split()[0])
             items_num = int(f.readline().split()[0])
@@ -143,8 +94,7 @@ class UserItemDataset:
         with open(ratings_filepath) as f:
             for line in f:
                 line_data = line.split()
-                user_id = int(line_data[0]) - 1
-                item_id = int(line_data[1]) - 1
+                user_id, item_id = int(line_data[0]) - 1, int(line_data[1]) - 1
 
                 self.interactions_data[user_id][item_id] = 1
 
@@ -245,6 +195,3 @@ class UserItemDataset:
     def get_gender(self,
                    user_id):
         return self.users_data[user_id][0]
-
-
-
