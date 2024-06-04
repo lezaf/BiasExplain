@@ -1,5 +1,5 @@
-# Counterfactual Explanations for Bias Recommendation
-Code and data for the paper: "Counterfactual explanations for Bias Recommendation".
+# Counterfactual Explanations for Recommendation Bias
+Code and data for the paper: "Counterfactual Explanations for Recommendation Bias".
 
 ## Datasets
 Folder [datasets](https://github.com/lezaf/BiasExplain/tree/main/datasets) contains the real and synthetic data we used. Within this folder:
