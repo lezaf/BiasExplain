@@ -1,7 +1,7 @@
 # Counterfactual Explanations for Recommendation Bias
 Code and data for the paper:
 
-L. Zafeiriou, E. Pitoura, P. Tsaparas, Counterfactual Explanations for Recommendation Bias, BIAS Workshop, ECML-PKDD, 2023.
+L. Zafeiriou, [E. Pitoura](https://www.cs.uoi.gr/~pitoura/), [P. Tsaparas](https://www.cs.uoi.gr/~tsap/), Counterfactual Explanations for Recommendation Bias, BIAS Workshop, ECML-PKDD, 2023.
 
 ## Datasets
 Folder [datasets](https://github.com/lezaf/BiasExplain/tree/main/datasets) contains the real and synthetic data we used. Within this folder:
